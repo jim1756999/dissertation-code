@@ -17,7 +17,7 @@ import matplotlib.pyplot as plt
 
 
 app = Flask(__name__)
-CORS(app)
+cors = CORS(app)
 
 def test_model(model, X_test, y_test):
     """
@@ -391,5 +391,4 @@ def checker():
 
 # Main execution
 if __name__ == "__main__":
-    CORS(app)
     app.run(debug=True, port=5000)
